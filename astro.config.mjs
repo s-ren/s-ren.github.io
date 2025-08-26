@@ -12,7 +12,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://sileiren.com',
+    site: 'https://s-ren.github.io/',
+    base: './',
     integrations: [mdx(), react(), tailwind({
         applyBaseStyles: false,
     }), icon(), sitemap()],
