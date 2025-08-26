@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {getCollection} from 'astro:content';
+import ResearchCardList from '@/components/ResearchCardList.astro';
+
+interface Research {
+    id: string;
+    data: {
+        title: string;
+        status: string;
+        abstract: string;
+        url: string;
+    };
+}
+
+const allResearch = (await getCollection('research'));
+---
+
+<Layout title="My Research" description="Research projects" scrollSmooth={false}>
+    <>
+        <!--Projects Section-->
+        <section class="border-bottom">
+            <div class="mb-4">
+                <h2 class="text-3xl font-bold mb-8">All My Projects</h2>
+            </div>
+        </section>
+        <!--Projects List-->
+        <section class="flex flex-col gap-8">
+            {allResearch.length > 0 ? (
+                allResearch.map((research: Research) => (
+                        <ResearchCardList
+                                id={research.id}
+                                title={research.data.title}
+                                abstract={research.data.abstract}
+                                status={research.data.status}
+                                url={research.data.url}
+                        />
+                ))
+            ) : (
+                    <p>No projects found.</p>
+            )}
+        </section>
+    </>
+</Layout>

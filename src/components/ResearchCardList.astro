@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  abstract: string;
+  status: string;
+  url: string;
+  id: string;
+}
+
+const { title, abstract, status, url, id } = Astro.props as Props;
+---
+
+<a class="project-card" aria-label={`View project '${title}'`}>
+  <div class="flex flex-col gap-3 p-4 rounded-xl border border-gray-200 dark:border-n700 dark:hover:bg-n800 transition-all">
+    
+    <!-- Title -->
+    <h6 class="font-semibold text-xl text-n500 dark:text-white">
+      <a href={url}>
+        {title}
+      </a>
+
+    </h6>
+
+ <!-- Abstract (hidden until hover) -->
+ <!-- Expandable abstract -->
+    <details class="text-sm text-n500 dark:text-light-theme">
+      <summary class="cursor-pointer text-gray-400">Abstract</summary>
+      <p class="mt-2">{abstract}</p>
+    </details>
+    <!--     <p class="text-sm text-n500 dark:text-light-theme">
+      {abstract}
+    </p> Abstract -->
+
+
+    <!-- Status -->
+    <p class="text-sm italic text-n400 dark:text-n300">
+      {status}
+    </p>
+  </div>
+</a>

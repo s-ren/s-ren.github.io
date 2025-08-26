@@ -1,0 +1,54 @@
+
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import BackBtn from "@/components/BackBtn.astro";
+import BackToTop from "../../components/BackToTop.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection('research');
+    return posts.map(post => ({
+        params: { id: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { title, abstract, status, url } = post.data;
+
+const { Content } = await render(post);
+
+---
+<Layout title={title} description={abstract} scrollSmooth={true}>
+    <>
+        <div class="flex justify-center mt-10">
+            <BackBtn/>
+        </div>
+        <div class="flex flex-col gap-6 justify-center items-center">
+            <h1 class="text-3xl font-bold text-center">
+                <a href={url}>
+                    {title}
+                </a>
+            </h1>
+        </div>
+        <p>
+            {abstract}
+        </p>
+
+        <p class="text-sm italic text-n400 dark:text-n300 text-center">
+           {status}
+        </p>
+
+        <article id="article" class="mt-8 prose dark:prose-invert">
+            <Content/>
+        </article>
+        <BackToTop />
+    </>
+</Layout>
+
+<style is:global>
+    h2 {
+        @apply text-2xl font-bold my-4;
+    }
+</style>
+

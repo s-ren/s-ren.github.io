@@ -1,0 +1,32 @@
+---
+// astro imports
+import {getCollection} from "astro:content";
+
+// components imports
+import ResearchCard from "./ResearchCard.astro";
+import {buttonVariants} from "./ui/button";
+
+const allResearch = (await getCollection('research'));
+---
+
+<!--Grid section to show the research in to columns -->
+<>
+    <section class="mt-10 px-4 w-full">
+        <!--<div class="mb-4">
+            <h2 class="text-3xl font-bold mb-4">Research Projects</h2>
+        </div> -->
+        <div class="flex flex-col gap-4">
+            {
+                allResearch.map((research) => (
+                        <ResearchCard
+                                id={research.id}
+                                title={research.data.title}
+                                abstract={research.data.abstract}
+                                status={research.data.status}
+                                url={research.data.url}
+                        />
+                ))
+            }
+        </div>
+    </section>
+</>

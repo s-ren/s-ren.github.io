@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfileInfo from "../components/ProfileInfo.astro";
+import ProfileActionButton from "../components/ProfileActionButton.astro";
+import TabsButtons from "../components/TabsButtons.tsx";
+import ResearchCC from '@/components/ResearchCC.astro';
+import ProjectsCC from '@/components/ProjectsCC.astro';
+import AboutMeCC from "../components/AboutMeCC.astro";
+import ProfileFacts from "../components/ProfileFacts.astro";
+---
+
+<Layout title="Silei Ren" description="Silei Ren Personal Website" scrollSmooth={false}>
+    <>
+        <ProfileInfo/>
+        <ProfileFacts/>
+        <ProfileActionButton/>
+        <!--  <AboutMeCC/> -->
+        <TabsButtons client:idle>
+            <ResearchCC slot="portfolio"/>
+            <AboutMeCC slot="about"/>
+        </TabsButtons>
+    </>
+</Layout>
