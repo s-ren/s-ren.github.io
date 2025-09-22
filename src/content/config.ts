@@ -43,6 +43,7 @@ const research = defineCollection({
         status: z.string(),
         abstract: z.string(),
         url: z.string(),
+        order: z.number().int().min(0).default(0), // order
     }),
 });
 

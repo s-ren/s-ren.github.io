@@ -24,9 +24,9 @@ export const ME = {
         linkedin: "https://www.linkedin.com/in/silei/",
         resumeDoc: "resume.pdf",
     },
-    aboutMe: "I am a PhD student at Cornell University working with professor Andrew Myers. " + 
+    aboutMe: "I am a PhD student at Cornell University working with professor <a href=\"https://www.cs.cornell.edu/andru/\"> Andrew C. Myers</a>. " + 
     "I work on programming language, compiler and security. " + 
-    "In particular, I focus on formalizing, enforcing and proving security in open, decentralized systems.", 
+    "in particular, i focus on formalizing, enforcing and proving security in open, decentralized systems.", 
 }
 
 export const SOCIALS = [

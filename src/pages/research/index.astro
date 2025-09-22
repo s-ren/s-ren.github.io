@@ -27,7 +27,8 @@ const allResearch = (await getCollection('research'));
         <!--Projects List-->
         <section class="flex flex-col gap-8">
             {allResearch.length > 0 ? (
-                allResearch.map((research: Research) => (
+                allResearch.sort((a, b) => a.data.order - b.data.order)
+                .map((research: Research) => (
                         <ResearchCardList
                                 id={research.id}
                                 title={research.data.title}

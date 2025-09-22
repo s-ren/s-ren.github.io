@@ -19,9 +19,7 @@ import {ME} from '@/config';
 <div class="relative flex flex-col gap-8 text-n700 dark:text-n200 w-full mt-10 px-4">
     {/*Description or About me -- Section*/}
     <div class="mb-4">
-        <p>
-            {ME.aboutMe}
-        </p>
+            <p set:html={ME.aboutMe}></p>
     </div>
    <!--  {/*Work experience section*/}
     <div class="mb-4">
