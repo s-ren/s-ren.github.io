@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ['media'],
+    darkMode: 'class',
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		container: {
@@ -8,8 +8,8 @@ export default {
 			screens: {
 				sm: "100%",
 				md: "100%",
-				lg: "520px",
-				xl: "620px"
+				lg: "1024px",
+				xl: "1280px"
 			},
 			padding: '2rem',
 		},

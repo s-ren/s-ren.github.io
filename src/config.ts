@@ -15,18 +15,21 @@ export const SITE = {
 
 export const ME = {
     name: "Silei Ren",
-    profession: "PhD Student",
+    profession: "Ph.D. Candidate",
     profileImage: "head.png",
-    profileFacts: [
-    ],
+    profileFacts: [],
     contactInfo: {
         email: "sr2262@cornell.edu",
         linkedin: "https://www.linkedin.com/in/silei/",
         resumeDoc: "resume.pdf",
     },
-    aboutMe: "I am a PhD student at Cornell University working with professor <a href=\"https://www.cs.cornell.edu/andru/\"> Andrew C. Myers</a>. " + 
-    "I work on programming language, compiler and security. " + 
-    "in particular, i focus on formalizing, enforcing and proving security in open, decentralized systems.", 
+    aboutMe: "<p>I am a Ph.D. candidate at Cornell University, advised by professor " +
+    "<a class=\"hover:underline\" href=\"https://www.cs.cornell.edu/andru/\"> Andrew C. Myers</a>. " + 
+    "My research began with a broad focus on security, but over the years, " +
+    "I have become convinced that " +
+    "<a class=\"hover:underline\" href=\"https://en.wikipedia.org/wiki/Language-based_security\">language-based security</a> " + 
+    "is the best approach. My current work sits at the intersection of programming languages, compilers, and security.</p>" + 
+    "<p class=\"font-bold\">I am graduating in August 2026 and I am looking for industry opportunities!</p>", 
 }
 
 export const SOCIALS = [

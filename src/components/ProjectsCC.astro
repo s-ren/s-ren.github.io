@@ -6,36 +6,28 @@ import {getCollection} from "astro:content";
 import ProjectCard from "./ProjectCard.astro";
 import {buttonVariants} from "./ui/button";
 
-const allProjects = (await getCollection('projects'))
-    .sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime());;
+const allProjects = (await getCollection('projects'));
 ---
 
 <!--Grid section to show the projects in to columns -->
 <>
-    <section class="mt-10 px-4 w-full">
-        <div class="mb-4">
-            <h2 class="text-3xl font-bold mb-4">Projects</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section class="mt-4 w-full">
+        <div class="flex flex-col gap-0">
             {
-                allProjects.map((project) => (
+                allProjects.sort((a, b) => b.data.order - a.data.order)
+                .map((project) => (
                         <ProjectCard
                                 id={project.id}
-                                title={project.data.title}
                                 summary={project.data.summary}
-                                tags={project.data.tags}
-                                cover={project.data.cover}
+                                title={project.data.title}
+                                startDate={project.data.startDate}
+                                endDate={project.data.endDate}
+                                url={project.data.url}
+                                description={project.data.description}
+                                order={project.data.order}
                         />
                 ))
             }
         </div>
     </section>
-    <div class="flex justify-center mt-10">
-        <a href="/projects" class={buttonVariants({ variant: "default" }) + "text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark"}>
-            See All Projects
-        </a>
-    </div>
 </>
-
-
-

@@ -1,7 +1,5 @@
 
 import __ASTRO_IMAGE_IMPORT_2myHVG from "./images/customizing-theme-color-schemes/cover.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fcustomizing-theme-color-schemes.md";
 import __ASTRO_IMAGE_IMPORT_1xIVfm from "./images/customizing-user-information/cover.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fcustomizing-user-information.mdx";
-import __ASTRO_IMAGE_IMPORT_rB8fC from "./images/pro-accountant/accnt.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fpro-accountant.mdx";
-import __ASTRO_IMAGE_IMPORT_Z27euY2 from "./images/budget-wise/finance_app_concept.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Ffinance-app.mdx";
-export default new Map([["./images/customizing-theme-color-schemes/cover.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fcustomizing-theme-color-schemes.md", __ASTRO_IMAGE_IMPORT_2myHVG], ["./images/customizing-user-information/cover.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fcustomizing-user-information.mdx", __ASTRO_IMAGE_IMPORT_1xIVfm], ["./images/pro-accountant/accnt.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fpro-accountant.mdx", __ASTRO_IMAGE_IMPORT_rB8fC], ["./images/budget-wise/finance_app_concept.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Ffinance-app.mdx", __ASTRO_IMAGE_IMPORT_Z27euY2]]);
+export default new Map([["./images/customizing-theme-color-schemes/cover.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fcustomizing-theme-color-schemes.md", __ASTRO_IMAGE_IMPORT_2myHVG], ["./images/customizing-user-information/cover.webp?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fcustomizing-user-information.mdx", __ASTRO_IMAGE_IMPORT_1xIVfm]]);
 		

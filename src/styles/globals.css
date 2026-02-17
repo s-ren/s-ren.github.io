@@ -30,25 +30,23 @@ main {
     --tw-prose-hr: theme('colors.n500');
 }
 
-/* Dark mode customization */
-@media (prefers-color-scheme: dark) {
-    .prose {
-        color: theme('colors.n200');
-        --tw-prose-headings: theme('colors.light-theme');
-        --tw-prose-p: theme('colors.light-theme');
-        --tw-prose-a: theme('colors.primary-dark');
-        --tw-prose-a-hover: theme('colors.primary-hover-dark');
-        --tw-prose-blockquote: theme('colors.n500');
-        --tw-prose-figcaption: theme('colors.light-theme');
-        --tw-prose-strong: theme('colors.light-theme');
-        --tw-prose-code: theme('colors.light-theme');
-        --tw-prose-ol: theme('colors.light-theme');
-        --tw-prose-ul: theme('colors.light-theme');
-        --tw-prose-li-marker: theme('colors.n500');
-        --tw-prose-img: theme('colors.light-theme');
-        --tw-prose-hr: theme('colors.n500');
-    }
-}
+/* Dark mode customization removed */
+/*.prose {*/
+    /*color: theme('colors.n200');*/
+    /*--tw-prose-headings: theme('colors.light-theme');*/
+    /*--tw-prose-p: theme('colors.light-theme');*/
+    /*--tw-prose-a: theme('colors.primary-dark');*/
+    /*--tw-prose-a-hover: theme('colors.primary-hover-dark');*/
+    /*--tw-prose-blockquote: theme('colors.n500');*/
+    /*--tw-prose-figcaption: theme('colors.light-theme');*/
+    /*--tw-prose-strong: theme('colors.light-theme');*/
+    /*--tw-prose-code: theme('colors.light-theme');*/
+    /*--tw-prose-ol: theme('colors.light-theme');*/
+    /*--tw-prose-ul: theme('colors.light-theme');*/
+    /*--tw-prose-li-marker: theme('colors.n500');*/
+    /*--tw-prose-img: theme('colors.light-theme');*/
+    /*--tw-prose-hr: theme('colors.n500');*/
+/*}*/
 
 .prose img {
     @apply rounded-2xl;

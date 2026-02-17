@@ -11,10 +11,10 @@ const allResearch = (await getCollection('research'));
 
 <!--Grid section to show the research in to columns -->
 <>
-    <section class="mt-10 px-4 w-full">
-        <div class="flex flex-col gap-4">
+    <section class="mt-4 w-full">
+        <div class="flex flex-col gap-0">
             {
-                allResearch.sort((a, b) => a.data.order - b.data.order)
+                allResearch.sort((a, b) => b.data.order - a.data.order)
                 .map((research) => (
                         <ResearchCard
                                 id={research.id}

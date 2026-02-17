@@ -7,55 +7,25 @@
         "title": {
           "type": "string"
         },
+        "summary": {
+          "type": "string"
+        },
         "startDate": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
+          "type": "string"
         },
         "endDate": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "summary": {
           "type": "string"
         },
         "url": {
           "type": "string"
         },
-        "cover": {
+        "description": {
           "type": "string"
         },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "ogImage": {
-          "type": "string"
+        "order": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
         },
         "$schema": {
           "type": "string"
@@ -63,13 +33,11 @@
       },
       "required": [
         "title",
+        "summary",
         "startDate",
         "endDate",
-        "summary",
         "url",
-        "cover",
-        "tags",
-        "ogImage"
+        "description"
       ],
       "additionalProperties": false
     }

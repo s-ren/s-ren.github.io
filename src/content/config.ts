@@ -26,13 +26,12 @@ const projects = defineCollection({
     loader: glob({ pattern: "**/*.mdx", base: "./src/content/projects" }),
     schema: ({ image }) => z.object({
         title: z.string(),
-        startDate: z.date(),
-        endDate: z.date(),
         summary: z.string(),
+        startDate: z.string(),
+        endDate: z.string(),
         url: z.string(),
-        cover: image(),
-        tags: z.array(z.string()),
-        ogImage: z.string()
+        description: z.string(),
+        order: z.number().int().min(0).default(0), // order
     }),
 });
 

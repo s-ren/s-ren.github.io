@@ -1,0 +1,43 @@
+---
+// component imports
+import {Badge} from "./ui/badge";
+
+// library imports
+import {formatDatetime} from "../lib/utils";
+
+interface Talk {
+    title: string;
+    titleref: string;
+    Date: string;
+    venue: string;
+    venueref: string;
+    location: string;
+    locationref: string;
+    description: string;
+}
+
+const {talkdata} = Astro.props;  // Ensure correct typing for the props
+const {
+    title,
+    titleref,
+    Date,
+    venue,
+    venueref,
+    location,
+    locationref,
+    description,
+} = talkdata as Talk;
+
+---
+
+<div class="flex flex-col gap-2">
+    <Badge className="bg-primary-light dark:bg-primary-dark text-n700 w-fit rounded-md">
+            {formatDatetime(Date)}
+    </Badge>
+    <p><a href={titleref} class="text-xl font-bold hover:underline">{title}</a> &nbsp;
+        <a href={venueref}>{venue}</a>
+        <span class="text-sm font-bold">/</span>
+        <a href={locationref}>{location}</a>
+    </p>
+   {description}
+</div>

@@ -2,22 +2,22 @@
 const { title, abstract, status, url, id } = Astro.props;
 ---
 
-  <div class="flex flex-col gap-3 p-4 rounded-xl border border-gray-200 dark:border-n700 dark:hover:bg-n800 transition-all">
+  <div class="flex flex-col gap-3 py-4 pr-4 pl-0 rounded-xl border-y border-r border-transparent dark:border-n900 dark:hover:bg-n800 transition-all">
     <!-- Project Title -->
-    <h4 class="font-semibold text-xl text-n500 dark:text-white mb-2">
+    <h4 class="font-semibold text-xl text-n900 dark:text-n200">
       <a href={url}>
         {title}
       </a>
     </h4>
 
     <!-- Abstract -->
-    <details class="text-sm text-n500 dark:text-light-theme">
-      <summary class="cursor-pointer text-gray-400">Abstract</summary>
-      <p class="mt-2">{abstract}</p>
+    <details class="text-sm text-n900 dark:text-light-theme">
+      <summary class="cursor-pointer text-n900">Abstract</summary>
+      <p class="mt-2 text-n900 dark:text-n900">{abstract}</p>
     </details>
 
     <!-- Status -->
-    <p class="text-sm italic text-n400 dark:text-n300">
+    <p class="text-sm italic text-n900 dark:text-n300">
       {status}
     </p>
   </div>
