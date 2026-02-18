@@ -5,7 +5,7 @@ const { title, abstract, status, url, id } = Astro.props;
   <div class="flex flex-col gap-3 py-4 pr-4 pl-0 rounded-xl border-y border-r border-transparent dark:border-n900 dark:hover:bg-n800 transition-all">
     <!-- Project Title -->
     <h4 class="font-semibold text-xl text-n900 dark:text-n200">
-      <a href={url}>
+      <a class="hover:underline" href={url}>
         {title}
       </a>
     </h4>

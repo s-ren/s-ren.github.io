@@ -10,7 +10,7 @@ interface Education {
 
 const  education: Education[] = [
     {
-        title: "Ph.D. in Computer Science",
+        title: "Ph.D. Candidate in Computer Science",
         startDate: "2020-02",
         endDate: "2026-09",
         school: "Cornell University",
