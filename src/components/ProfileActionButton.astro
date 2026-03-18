@@ -3,6 +3,7 @@
 import { Button} from "./ui/button";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Github from "../icons/github-fill.svg";
+import Scholar from "../icons/google-scholar.svg";
 import DownloadArrow from "./icons/DownloadArrow.astro";
 
 // config import
@@ -20,6 +21,12 @@ const {linkedin, email} = ME.contactInfo;
         Download CV
         <DownloadArrow width={24} height={24}  />
     </Button>
+
+    <a href={`https://scholar.google.com/citations?user=cV6fmy0AAAAJ`} aria-label="view my Google Scholar profile" class="flex-1">
+        <Button size="icon" className="[&_svg]:size-8 px-4 md:px-8 h-14 w-full text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark">
+            <Scholar width={24} height={24} />
+        </Button>
+    </a>
 
     <a href={`https://github.com/s-ren`} aria-label="view my GitHub" class="flex-1">
         <Button size="icon" className="[&_svg]:size-8 px-4 md:px-8 h-14 w-full text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark">
