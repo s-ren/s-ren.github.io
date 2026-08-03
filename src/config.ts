@@ -15,7 +15,7 @@ export const SITE = {
 
 export const ME = {
     name: "Silei Ren",
-    profession: "Ph.D. Candidate",
+    profession: "Ph.D. in Computer Science, Cornell University | Incoming Applied Scientist at Amazon",
     profileImage: "head.png",
     profileFacts: [],
     contactInfo: {
