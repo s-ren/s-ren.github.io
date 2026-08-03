@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import WebappCard from '@/components/WebappCard.astro';
+
+interface Webapp {
+    id: string;
+    data: {
+        title: string;
+        description: string;
+        url: string;
+        order: number;
+    };
+}
+
+const allWebapps = await getCollection('webapps');
+---
+
+<Layout title="Web Apps" description="A collection of small web applications" scrollSmooth={false}>
+    <>
+        <section class="border-bottom">
+            <div class="mb-4">
+                <h2 class="text-3xl font-bold mb-8">Web Apps</h2>
+            </div>
+        </section>
+        <section class="flex flex-col gap-8">
+            {allWebapps.length > 0 ? (
+                allWebapps
+                    .sort((a, b) => a.data.order - b.data.order)
+                    .map((webapp: Webapp) => (
+                        <WebappCard
+                            title={webapp.data.title}
+                            description={webapp.data.description}
+                            url={webapp.data.url}
+                        />
+                    ))
+            ) : (
+                <p>No web apps found.</p>
+            )}
+        </section>
+    </>
+</Layout>

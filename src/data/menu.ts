@@ -6,5 +6,9 @@ export const menu = [
     {
         href: '/research',
         label: 'Research',
+    },
+    {
+        href: '/webapps',
+        label: 'Web Apps',
     }
 ]

@@ -46,5 +46,15 @@ const research = defineCollection({
     }),
 });
 
+const webapps = defineCollection({
+    loader: glob({ pattern: "**/*.mdx", base: "./src/content/webapps" }),
+    schema: () => z.object({
+        title: z.string(),
+        description: z.string(),
+        url: z.string(),
+        order: z.number().int().min(0).default(0),
+    }),
+});
+
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = {  projects, posts, research, };
+export const collections = { projects, posts, research, webapps };

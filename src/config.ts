@@ -23,13 +23,12 @@ export const ME = {
         linkedin: "https://www.linkedin.com/in/silei/",
         resumeDoc: "resume.pdf",
     },
-    aboutMe: "<p>I am a Ph.D. candidate at Cornell University, advised by professor " +
+    aboutMe: 
+    "<p>I recently completed my Ph.D. at Cornell University with professor " +
     "<a class=\"hover:underline\" href=\"https://www.cs.cornell.edu/andru/\"> Andrew C. Myers</a>. " + 
-    "My research began with a broad focus on security, but over the years, " +
-    "I have become convinced that " +
-    "<a class=\"hover:underline\" href=\"https://en.wikipedia.org/wiki/Language-based_security\">language-based security</a> " + 
-    "is the best approach. My current work sits at the intersection of programming languages, compilers, and security.</p>" + 
-    "<p class=\"font-bold\">I am graduating in August 2026 and I am looking for industry opportunities!</p>", 
+    "My thesis explores <a class=\"hover:underline\" href=\"https://en.wikipedia.org/wiki/Language-based_security\">language-based</a> " + 
+    "foundations for practical, extensible security in decentralized systems. " + 
+    "I am joining Amazon as an Applied Scientist this September."
 }
 
 export const SOCIALS = [
